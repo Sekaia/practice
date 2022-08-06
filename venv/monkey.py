@@ -24,6 +24,9 @@ class Monkey:
     def __str__(self):
         return f"{self.age} year old {self.type}"
 
+    def __eq__(self, other):
+        return self.type == other.type and self.age == other.age
+
     #method
     def speak(self):
         print("Ooo oo ah ah!")
@@ -60,8 +63,8 @@ class Jungle:
 
 #instantiating instances
 bobo = Monkey(True, 2, 2, 3)
-taburi = Monkey(False, 0, 4, 18, "Gorilla")
-maburi = Monkey(True, 2, 2, 10, "Lion-tailed macaque")
+taburi = Monkey(False, 0, 4, 18, "Lion-tailed macaque")
+maburi = Monkey(True, 2, 2, 18, "Lion-tailed macaque")
 kaburi = Monkey(False, 0, 4, 28, "Black Howler")
 laburi = Monkey(True, 2, 2, 30, "Mandrill")
 monkey_jungle = Jungle()
@@ -87,5 +90,9 @@ print(taburi)
 for monkey in monkey_jungle:
     print(monkey)
 
+if taburi == maburi:
+    print("equal")
+else:
+    print("not equal")
 
 
