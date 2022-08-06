@@ -11,6 +11,7 @@
 # eats bananas
 # steals things
 
+# class
 class Monkey:
     def __init__(self, tail, arms, legs, type="Tamarin"):
         self.tail = tail
@@ -18,7 +19,7 @@ class Monkey:
         self.legs = legs
         self.type = type
         self.is_hungry = True
-
+    #method
     def speak(self):
         print("Ooo oo ah ah!")
 
@@ -42,7 +43,7 @@ class Monkey:
         else:
             print("Monkey not hungry.. yet..")
 
-
+#instantiating instances
 bobo = Monkey(True, 2, 2)
 taburi = Monkey(False, 0, 4, "Gorilla")
 
